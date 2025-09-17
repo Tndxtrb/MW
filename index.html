@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Мой сайт‑визитка</title>
+  <meta name="description" content="Краткий about me и ссылки на соцсети" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <main class="wrap">
+    <header class="header">
+      <button class="theme-toggle" aria-label="Переключить тему" title="Переключить тему">
+        <span class="theme-icon" aria-hidden="true">◐</span>
+      </button>
+
+      <div class="avatar" aria-hidden="true">
+        <span id="avatar-initials">AA</span>
+      </div>
+
+      <h1 id="display-name">Алекс Андреев</h1>
+      <p id="handle" class="handle">@alex.andreev</p>
+
+      <p id="about" class="about">
+        Привет! Я продакт‑дизайнер. Делаю понятные интерфейсы, люблю простоту и данные.
+      </p>
+
+      <div class="cta-row">
+        <a id="primary-link" class="btn primary" href="mailto:hello@example.com">Связаться</a>
+        <button id="share-btn" class="btn ghost" type="button">Поделиться</button>
+      </div>
+    </header>
+
+    <section class="links" aria-label="Ссылки на соцсети">
+      <a class="link-card" href="https://t.me/username" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M9.03 13.67l-.15 3.88c.22 0 .32-.09.43-.2l2.07-1.98 4.29 3.15c.79.44 1.35.21 1.56-.73l2.83-13.27c.25-1.16-.44-1.61-1.2-1.33L2.5 9.45C1.37 9.88 1.38 10.52 2.3 10.8l4.35 1.36 10.1-6.37c.48-.29.91-.13.55.18"/></svg>
+        </span>
+        <span class="label">Telegram</span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="link-card" href="https://www.instagram.com/username" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm6.25-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/></svg>
+        </span>
+        <span class="label">Instagram</span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="link-card" href="https://x.com/username" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.7 10.6L20.9 3h-1.7l-6 6.7L8.3 3H3l7.6 11L3 21h1.7l6.4-7.1 5 7.1H21l-7.3-10.4z"/></svg>
+        </span>
+        <span class="label">X (Twitter)</span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="link-card" href="https://www.youtube.com/@username" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.75 15.5v-7l6 3.5-6 3.5z"/></svg>
+        </span>
+        <span class="label">YouTube</span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="link-card" href="https://www.linkedin.com/in/username" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07c.67-1.2 2.32-2.46 4.78-2.46 5.11 0 6.05 3.36 6.05 7.73V24h-5V16.6c0-1.76-.03-4.03-2.46-4.03-2.46 0-2.84 1.92-2.84 3.9V24h-5V8z"/></svg>
+        </span>
+        <span class="label">LinkedIn</span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <footer class="footer">
+      <button id="copy-link" class="mini" type="button" data-copy="https://example.com/me">Скопировать ссылку</button>
+      <span class="hint">Нажми, чтобы скопировать адрес профиля</span>
+    </footer>
+  </main>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
