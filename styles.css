@@ -51,6 +51,7 @@ body {
   display: grid; place-items: center;
   border: 1px solid var(--line);
   user-select: none;
+  overflow: hidden;
 }
 #avatar-initials {
   font-family: "Space Mono", ui-monospace, monospace;
